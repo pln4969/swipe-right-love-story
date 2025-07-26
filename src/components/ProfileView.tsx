@@ -1,16 +1,16 @@
 import { Settings, Edit, Camera, MapPin, Heart, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import profile1 from "@/assets/profile-1.jpg";
+import profile1 from "@/assets/garba-profile-1.jpg";
 
 export const ProfileView = () => {
   const userProfile = {
     name: "You",
     age: 25,
     image: profile1,
-    bio: "Adventure seeker, coffee lover, and always up for trying new things. Swipe right if you're ready for genuine conversations and new experiences!",
-    location: "Downtown",
-    interests: ["Travel", "Photography", "Hiking", "Coffee", "Music", "Art"],
+    bio: "Passionate Garba dancer who loves celebrating our beautiful Gujarati culture! Always excited for Navratri season and meeting fellow dance enthusiasts. Let's create magical moments on the dance floor! 💃✨",
+    location: "Ahmedabad",
+    interests: ["Garba", "Dandiya", "Folk Music", "Traditional Attire", "Festival Celebrations", "Cultural Events"],
     photos: [profile1, profile1, profile1] // In a real app, these would be different photos
   };
 
@@ -104,7 +104,7 @@ export const ProfileView = () => {
             <Heart className="w-6 h-6 text-like" />
           </div>
           <div className="text-2xl font-bold text-card-foreground">24</div>
-          <div className="text-sm text-muted-foreground">Likes Given</div>
+          <div className="text-sm text-muted-foreground">Dance Likes</div>
         </Card>
         
         <Card className="p-4 text-center">
@@ -122,7 +122,7 @@ export const ProfileView = () => {
           <Star className="w-8 h-8 mx-auto mb-3" />
           <h3 className="text-lg font-bold mb-2">Upgrade to Premium</h3>
           <p className="text-sm opacity-90 mb-4">
-            Get unlimited likes, see who likes you, and boost your profile!
+            Get unlimited likes, see who wants to dance with you, and boost your profile!
           </p>
           <Button variant="secondary" className="w-full">
             Upgrade Now

@@ -6,6 +6,7 @@ import { SignUpForm } from "@/components/auth/SignUpForm";
 import { SwipeStack } from "@/components/SwipeStack";
 import { MatchesView } from "@/components/MatchesView";
 import { ProfileView } from "@/components/ProfileView";
+import { ChatView } from "@/components/ChatView";
 import { Navigation } from "@/components/Navigation";
 import { Flame, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,8 +25,9 @@ interface Profile {
 const Index = () => {
   const { isAuthenticated, signIn, signUp, signOut, user } = useAuth();
   const [authView, setAuthView] = useState<'landing' | 'signin' | 'signup'>('landing');
-  const [activeTab, setActiveTab] = useState<'discover' | 'matches' | 'profile'>('discover');
+  const [activeTab, setActiveTab] = useState<'discover' | 'matches' | 'profile' | 'chat'>('discover');
   const [matches, setMatches] = useState<Profile[]>([]);
+  const [chatProfile, setChatProfile] = useState<Profile | null>(null);
   const { toast } = useToast();
 
   const handleMatch = (profile: Profile) => {
@@ -33,10 +35,11 @@ const Index = () => {
   };
 
   const handleStartChat = (profile: Profile) => {
-    // In a real app, this would navigate to a chat screen
+    setActiveTab('chat');
+    setChatProfile(profile);
     toast({
       title: "Chat Started! 💬",
-      description: `You can now chat with ${profile.name}`,
+      description: `You can now chat with ${profile.name} about Garba!`,
     });
   };
 
@@ -44,8 +47,8 @@ const Index = () => {
     try {
       await signIn(email, password);
       toast({
-        title: "Welcome back! 🎉",
-        description: "You're successfully signed in",
+        title: "Welcome back! 🪩",
+        description: "Ready to dance? Let's find your Garba partner!",
       });
     } catch (error) {
       toast({
@@ -60,8 +63,8 @@ const Index = () => {
     try {
       await signUp(data);
       toast({
-        title: "Account created! 🎉",
-        description: "Welcome to TinderClone",
+        title: "Welcome to GarbaConnect! 🎉",
+        description: "Let's find your perfect dance partner!",
       });
     } catch (error) {
       toast({
@@ -111,7 +114,7 @@ const Index = () => {
               <Flame className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              TinderClone
+              GarbaConnect
             </span>
           </div>
           
@@ -133,10 +136,10 @@ const Index = () => {
             <div className="space-y-6">
               <div className="text-center">
                 <h1 className="text-2xl font-bold text-foreground mb-2">
-                  Discover People
+                  Discover Dancers
                 </h1>
                 <p className="text-muted-foreground">
-                  Swipe right to like, left to pass
+                  Swipe right to connect, left to pass
                 </p>
               </div>
               <SwipeStack onMatch={handleMatch} />
@@ -150,15 +153,27 @@ const Index = () => {
           {activeTab === 'profile' && (
             <ProfileView />
           )}
+
+          {activeTab === 'chat' && chatProfile && (
+            <ChatView 
+              profile={chatProfile} 
+              onBack={() => {
+                setActiveTab('matches');
+                setChatProfile(null);
+              }} 
+            />
+          )}
         </div>
       </main>
 
-      {/* Navigation */}
-      <Navigation 
-        activeTab={activeTab} 
-        onTabChange={setActiveTab}
-        matchCount={matches.length}
-      />
+      {/* Navigation - Only show if not in chat */}
+      {activeTab !== 'chat' && (
+        <Navigation 
+          activeTab={activeTab as 'discover' | 'matches' | 'profile'} 
+          onTabChange={(tab) => setActiveTab(tab)}
+          matchCount={matches.length}
+        />
+      )}
     </div>
   );
 };

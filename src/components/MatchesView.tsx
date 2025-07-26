@@ -23,10 +23,10 @@ export const MatchesView = ({ matches, onStartChat }: MatchesViewProps) => {
       <div className="flex flex-col items-center justify-center h-96 text-center p-8">
         <Heart className="w-16 h-16 text-muted-foreground mb-4" />
         <h2 className="text-2xl font-bold text-foreground mb-2">
-          No matches yet
+          No dance partners yet
         </h2>
         <p className="text-muted-foreground">
-          Start swiping to find your perfect match!
+          Start swiping to find your perfect Garba partner!
         </p>
       </div>
     );
@@ -36,10 +36,10 @@ export const MatchesView = ({ matches, onStartChat }: MatchesViewProps) => {
     <div className="space-y-6">
       <div className="text-center">
         <h2 className="text-2xl font-bold text-foreground mb-2">
-          Your Matches 💕
+          Your Dance Partners 💃🕺
         </h2>
         <p className="text-muted-foreground">
-          {matches.length} {matches.length === 1 ? 'person likes' : 'people like'} you back!
+          {matches.length} {matches.length === 1 ? 'dancer wants' : 'dancers want'} to join you at Garba!
         </p>
       </div>
 

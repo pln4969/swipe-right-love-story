@@ -17,17 +17,17 @@ export const LandingPage = ({ onGetStarted, onSignIn }: LandingPageProps) => {
             <Flame className="w-12 h-12 text-white" />
           </div>
           <h1 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            TinderClone
+            GarbaConnect
           </h1>
         </div>
 
         {/* Hero Text */}
         <div className="max-w-md space-y-4 mb-12">
           <h2 className="text-3xl font-bold text-foreground leading-tight">
-            Start Something Epic
+            Find Your Perfect Dance Partner
           </h2>
           <p className="text-lg text-muted-foreground">
-            With millions of users and a proven track record, TinderClone is the fun way to meet new people.
+            Connect with fellow Garba enthusiasts and celebrate the joy of traditional dance together this Navratri season.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export const LandingPage = ({ onGetStarted, onSignIn }: LandingPageProps) => {
           </div>
           <div className="flex items-center space-x-1">
             <Users className="w-4 h-4" />
-            <span className="text-sm">Millions of Users</span>
+            <span className="text-sm">Dance Community</span>
           </div>
           <div className="flex items-center space-x-1">
             <Heart className="w-4 h-4" />
@@ -73,10 +73,10 @@ export const LandingPage = ({ onGetStarted, onSignIn }: LandingPageProps) => {
       <div className="px-6 py-16 max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold text-foreground mb-4">
-            Why Choose TinderClone?
+            Why Choose GarbaConnect?
           </h3>
           <p className="text-muted-foreground">
-            The best features to help you find meaningful connections
+            The best platform to connect with passionate Garba dancers and celebrate our culture
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export const LandingPage = ({ onGetStarted, onSignIn }: LandingPageProps) => {
             </div>
             <h4 className="text-lg font-semibold text-foreground">Smart Matching</h4>
             <p className="text-muted-foreground">
-              Our algorithm finds people who share your interests and values
+              Connect with dancers who share your passion for Garba and traditional culture
             </p>
           </div>
 
@@ -95,9 +95,9 @@ export const LandingPage = ({ onGetStarted, onSignIn }: LandingPageProps) => {
             <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mx-auto">
               <MessageCircle className="w-8 h-8 text-secondary" />
             </div>
-            <h4 className="text-lg font-semibold text-foreground">Safe Messaging</h4>
+            <h4 className="text-lg font-semibold text-foreground">Event Planning</h4>
             <p className="text-muted-foreground">
-              Connect with verified profiles in a secure environment
+              Plan Garba nights, coordinate meetups, and share festival experiences together
             </p>
           </div>
 
@@ -105,9 +105,9 @@ export const LandingPage = ({ onGetStarted, onSignIn }: LandingPageProps) => {
             <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto">
               <Star className="w-8 h-8 text-accent" />
             </div>
-            <h4 className="text-lg font-semibold text-foreground">Premium Features</h4>
+            <h4 className="text-lg font-semibold text-foreground">Cultural Community</h4>
             <p className="text-muted-foreground">
-              Get super likes, boosts, and see who likes you first
+              Join a vibrant community celebrating Gujarati culture and traditions
             </p>
           </div>
         </div>
@@ -116,7 +116,7 @@ export const LandingPage = ({ onGetStarted, onSignIn }: LandingPageProps) => {
       {/* Bottom CTA */}
       <div className="px-6 py-12 text-center bg-card/50 backdrop-blur-sm border-t border-border">
         <h3 className="text-xl font-bold text-foreground mb-4">
-          Ready to Find Love?
+          Ready to Dance Together?
         </h3>
         <Button 
           variant="gradient" 
@@ -124,7 +124,7 @@ export const LandingPage = ({ onGetStarted, onSignIn }: LandingPageProps) => {
           className="px-12 py-6 text-lg rounded-2xl"
           onClick={onGetStarted}
         >
-          Get Started Now
+          Start Dancing Now
         </Button>
       </div>
     </div>

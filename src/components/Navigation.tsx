@@ -38,7 +38,7 @@ export const Navigation = ({ activeTab, onTabChange, matchCount }: NavigationPro
             )}
           </div>
           <span className={`text-xs ${activeTab === 'matches' ? 'text-white' : 'text-muted-foreground'}`}>
-            Matches
+            Partners
           </span>
         </Button>
 

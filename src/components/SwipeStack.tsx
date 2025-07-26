@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { ProfileCard } from "./ProfileCard";
 import { useToast } from "@/hooks/use-toast";
 
-// Import profile images
-import profile1 from "@/assets/profile-1.jpg";
-import profile2 from "@/assets/profile-2.jpg";
-import profile3 from "@/assets/profile-3.jpg";
-import profile4 from "@/assets/profile-4.jpg";
-import profile5 from "@/assets/profile-5.jpg";
+// Import garba profile images
+import profile1 from "@/assets/garba-profile-1.jpg";
+import profile2 from "@/assets/garba-profile-2.jpg";
+import profile3 from "@/assets/garba-profile-3.jpg";
+import profile4 from "@/assets/garba-profile-4.jpg";
+import profile5 from "@/assets/garba-profile-5.jpg";
 
 interface Profile {
   id: number;
@@ -22,48 +22,48 @@ interface Profile {
 const sampleProfiles: Profile[] = [
   {
     id: 1,
-    name: "Emma",
+    name: "Priya",
     age: 25,
     image: profile1,
-    bio: "Love hiking, coffee, and good conversations. Looking for someone who shares my passion for adventure!",
-    location: "2 miles away",
-    interests: ["Travel", "Photography", "Yoga", "Coffee"]
+    bio: "Passionate Garba dancer who lives for Navratri nights! Love traditional music, dandiya, and meeting new people who share the same energy. Let's dance under the stars! 💃",
+    location: "2 km away",
+    interests: ["Garba", "Dandiya", "Folk Music", "Festival Celebrations", "Traditional Dance"]
   },
   {
     id: 2,
-    name: "Alex",
+    name: "Arjun",
     age: 28,
     image: profile2,
-    bio: "Software engineer by day, chef by night. Always up for trying new restaurants or cooking together.",
-    location: "5 miles away",
-    interests: ["Cooking", "Tech", "Music", "Running"]
+    bio: "Software engineer by day, Garba enthusiast by night! Been dancing since childhood and love the cultural richness of Gujarat. Looking for my dance partner for life! 🕺",
+    location: "5 km away",
+    interests: ["Garba", "Gujarati Culture", "Music", "Travel", "Food"]
   },
   {
     id: 3,
-    name: "Sofia",
+    name: "Kavya",
     age: 26,
     image: profile3,
-    bio: "Artist and dreamer. I paint what I feel and feel what I paint. Let's create something beautiful together.",
-    location: "3 miles away",
-    interests: ["Art", "Museums", "Wine", "Dancing"]
+    bio: "Classical dancer exploring the beautiful world of folk dance. Garba has my heart! Love dressing up in traditional attire and celebrating our rich heritage. ✨",
+    location: "3 km away",
+    interests: ["Classical Dance", "Garba", "Fashion", "Art", "Cultural Events"]
   },
   {
     id: 4,
-    name: "Marcus",
+    name: "Rohan",
     age: 30,
     image: profile4,
-    bio: "Fitness enthusiast and personal trainer. Believer in work-life balance and good vibes only.",
-    location: "1 mile away",
-    interests: ["Fitness", "Basketball", "Meditation", "Movies"]
+    bio: "Fitness trainer who stays in shape for all those energetic Garba nights! Love the community spirit and joy that comes with dancing. Let's create beautiful memories! 💪",
+    location: "1 km away",
+    interests: ["Fitness", "Garba", "Community Events", "Health", "Dance"]
   },
   {
     id: 5,
-    name: "Luna",
+    name: "Ananya",
     age: 24,
     image: profile5,
-    bio: "Music lover and vinyl collector. If you can appreciate good music and late-night conversations, we'll get along.",
-    location: "4 miles away",
-    interests: ["Music", "Vinyl", "Books", "Night life"]
+    bio: "Modern girl with traditional values. Garba brings out my authentic self! Love experimenting with fusion styles while keeping the essence alive. Dance is life! 🌟",
+    location: "4 km away",
+    interests: ["Fusion Dance", "Fashion Design", "Garba", "Music", "Creativity"]
   }
 ];
 
@@ -90,8 +90,8 @@ export const SwipeStack = ({ onMatch }: SwipeStackProps) => {
       // It's a match!
       onMatch(currentProfile);
       toast({
-        title: "It's a Match! 💕",
-        description: `You and ${currentProfile.name} liked each other!`,
+        title: "It's a Match! 💃🕺",
+        description: `You and ${currentProfile.name} both love Garba! Time to plan your dance together!`,
       });
     }
 
@@ -109,10 +109,10 @@ export const SwipeStack = ({ onMatch }: SwipeStackProps) => {
     return (
       <div className="flex flex-col items-center justify-center h-96 text-center">
         <h2 className="text-2xl font-bold text-foreground mb-4">
-          No more profiles! 🎉
+          No more dancers! 🪩
         </h2>
         <p className="text-muted-foreground">
-          Check back later for more people to discover.
+          Check back later for more Garba enthusiasts to discover.
         </p>
       </div>
     );
